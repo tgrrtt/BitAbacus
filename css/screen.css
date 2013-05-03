@@ -1,4 +1,3 @@
-
 body {
 }
 
@@ -6,7 +5,6 @@ header {
 	background: linear-gradient(to bottom, rgba(80,87,104,1) 0%,rgba(31,41,53,1) 100%);
 	width: 100%;
 }
-
 .header {
 	color: #EDEDED;
 	text-shadow: 2px 2px 4px black;
@@ -22,28 +20,4 @@ header {
 }
 #userName {
 	text-align:right;
-}
-
-table {
-	margin: 50px auto 50px auto;
-	border: 1px solid black;
-}
-
-table tr th {
-	color: black;
-}
-
-table tr td {
-	width: 90px;s
-	border: 1px solid black;
-}
-
-#tableLeft {
-	text-align: left;
-	display: inline-block;
-}
-
-#tableRight {
-	text-align: right;
-	display: inline-block;
 }
