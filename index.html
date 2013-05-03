@@ -2,105 +2,47 @@
 <html lang="en">
 <head> 
 	<title>BitAbacus</title>
-	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script> 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
 <body>
-	<header>
-		<h1 class="header" id="title">BitAbacus</h1>
-		<h2 class="header" id="curPrice">Mt.Gox $112</h2>
-		<h2 class="header" id="userName">Username</h2>
-	</header>
-
- 
-	<div class="container" id="table">
-		<div class="row-fluid">
-			<div class="span2"> Exchange </div>
-			<div class="span2"> Currency </div>
-			<div class="span2"> BTC </div>
-			<div class="span2"> USD </div>
-		</div>
-		<div class="row-fluid">
-			<div class="span2"> Mt. Gox </div>
-			<div class="span2"> btc 0 </div>
-			<div class="span2"> btc 0 </div>
-			<div class="span2"> btc 0 </div>
-		</div>
-		<div class="row-fluid">
-			<div class="span2"> BTC-e </div>
-			<div class="span2">
-				<p>btc 3.84</p>
-				<p>ltc 0</p>
-				<p>nmc 190</p>
-			</div>
-			<div class="span2"> btc 0 </div>
-			<div class="span2"> btc 0 </div>
-		</div>
-		<div class="row-fluid">
-			<div class="span2"> Wallet </div>
-			<div class="span2"> btc 0 </div>
-			<div class="span2"> btc 0 </div>
-			<div class="span2"> btc 0 </div>
-		</div>
-		<div class="row-fluid">
-			<div class="span2"> Totals </div>
-			<div class="span2"> btc 0 </div>
-			<div class="span2"> btc 0 </div>
-			<div class="span2"> btc 0 </div>
-		</div>
-	</div>
-<!-- disabled: using twitters row system
-	<table>
-		<tr>
-			
-			<th>Exchange</th>
-			<th>Currency</th>
-			<th>BTC</th>
-			<th>USD</th>
-		</tr>
-		<tr>
-			<th>Mt. Gox</th>
-			<td>btc 0 </td>
-			<td>btc 0 </td>
-			<td>$0</td>
-		</tr>
-		<tr>
-			<th>BTC-e</th>
-			<td>
-				<div>btc 3.84</div>
-				<div>ltc 0</div>
-				<div>nmc 190</div>
-			</td>
-			<td>
-				<div> btc 3.84</div>
-				<div> btc 0</div>
-				<div> btc 1.94</div>
-			</td>
-			<td>
-				<div> $ 407</div>
-				<div> $ 0 </div>
-				<div> $ 205</div>
-			</td>
-		</tr>
-		<tr>
-			<th>Wallet</th>
-			<td>ltc 199</td>
-			<td>btc 6.4 </td>
-			<td>$678.4</td>
-		</tr>
-		<tr>
-			<th>Total</th>
-			<td>
-				<div>btc 3.94</div>
-				<div>ltc 199</div>
-				<div>nmc 190</div>
-			</td>
-			<td>btc 12.18</td>
-			<td>$ 1290.4</td>
-		</tr>
-
-
-	</table> -->
+	<div class="navbar navbar-inverse navbar-fixed-top ">  
+  		<div class="navbar-inner">  
+			<div class="container">  
+   				<ul class="nav">  
+  					<li class="active">  
+						<a class="brand" href="#">BitAbacus</a>  
+  					</li>
+  					<li><a href="portfolio.html">Portfolio</a></li>
+  					<li><a href="#">Contact</a></li>  
+				</ul>
+				<ul class="nav pull-right">
+					<li class="dropdown">
+						<a href="#"
+							class="dropdown-toggle"
+							data-toggle="dropdown">
+							Username
+							<b class="caret"></b>  
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Settings</a></li>
+							<li><a href="#">Log Out</a></li>
+						</ul>  
+					</li>  
+				</ul> 
+			</div>  
+  		</div>  
+	</div> 
+	    <div class="container hero-unit" id="splash">
+    <h1>BitAbacus</h1>
+    <p>Keep track of your crypto-currency portfolio</p>
+    <p>
+    <a class="btn btn-primary btn-large">
+    Learn more
+    </a>
+    </p>
+    </div>
 </body>
 </html>
