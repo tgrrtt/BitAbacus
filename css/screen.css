@@ -1,6 +1,15 @@
 .avoid-header{
 	margin-top:75px;
 }
+
+.footer{
+	height:40px;
+	margin-top:-40px;
+}
+#setting-nav-list {
+	margin-top: 91px;
+}
+
 #splash {
 	margin-top: 100px;
 }
