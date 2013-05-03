@@ -1,16 +1,5 @@
-body {
-	background-color: #fdfdfd;
-}
-
-header {
-	background: linear-gradient(to bottom, rgba(80,87,104,1) 0%,rgba(31,41,53,1) 100%);
-	width: 100%;
-}
-.header {
-	color: #EDEDED;
-	text-shadow: 2px 2px 4px black;
-	display: inline-block;
-	width: 33%;
+.avoid-header{
+	margin-top:75px;
 }
 #splash {
 	margin-top: 100px;
@@ -22,14 +11,4 @@ header {
 #table {
 	background-color: #fdfdfd;
 	margin: auto;
-}
-
-#title {
-	text-align: left;
-}
-#curPrice {
-	text-align:center;
-}
-#userName {
-	text-align:right;
 }
