@@ -4,11 +4,11 @@
 	<title>BitAbacus</title>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.js"></script> 
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/spacelab-bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/screen.css">
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top ">
+	<div class="navbar navbar-fixed-top ">
 		<div class="navbar-inner">
 			<div class="container">
 				<ul class="nav">
@@ -16,8 +16,8 @@
 						<a class="brand" href="../index.html">BitAbacus</a>
 					</li>
 					<li><a href="../portfolio/index.html">Portfolio</a></li>
-					<li><a href="#"> Info</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="../info/index.html"> Info</a></li>
+					<li><a href="../contact/index.html">Contact</a></li>
 				</ul>
 				<ul class="nav pull-right">
 					<li class="dropdown active">
@@ -28,7 +28,7 @@
 							<b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="portfolioSettings.html">Settings</a></li>
+							<li><a href="index.html">Settings</a></li>
 							<li><a href="#">Log Out</a></li>
 						</ul>
 					</li>
@@ -42,17 +42,41 @@
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Settings</li>
-						<li><a href="portfolioSettings.html">Portfolio</a></li>
-						<li class="active"><a href="userSettings.html">User</a></li>
+						<li class="active"><a href="index.html#portfolio-settings">Portfolio</a></li>
+						<li><a href="index.html#user-settings">User</a></li>
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->
 			<div class="span9">
 				<div class="leaderboard"> 
-					<h3>User Settings</h3>
-					<p>Here you can change your email and password</p> 
+					<h3>Portfolio Settings</h3>
+					<p>View and edit your tracked exchanges and addresses</p> 
 					<form class="well">
-						<label>Current Password</label>
+						<a id="portfolio-settings"><label>Mt. Gox API Key</label></a>
+						<input type="text" class"span3" placeholder="type something">
+						<label>Mt. Gox API Secret</label>
+						<input type="text" class"span3" placeholder="type something">
+						<button type="submit" class="btn">Submit</button>  
+					</form>
+					<form class="well">
+						<label>BTC-E API Key</label>
+						<input type="text" class"span3" placeholder="type something">
+						<label>BTC-E API Secret</label>
+						<input type="text" class"span3" placeholder="type something">
+						<button type="submit" class="btn">Submit</button>  
+					</form>
+					<form class="well">
+						<label>Bitcoin Wallet</label>
+						<input type="text" class"span3" placeholder="type something">
+						<button type="submit" class="btn">Submit</button>  
+					</form>
+					<form class="well">
+						<label>Litecoin Wallet</label>
+						<input type="text" class"span3" placeholder="type something">
+						<button type="submit" class="btn">Submit</button>  
+					</form>
+					<form class="well">
+						<a id="user-settings"><label>Current Password</label></id>
 						<input type="text" class"span3" placeholder="type something">
 						<label>New password</label>
 						<input type="text" class"span3" placeholder="type something">

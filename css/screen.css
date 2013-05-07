@@ -14,8 +14,10 @@
 	margin-top: 100px;
 }
 #goxTick {
-	margin: 55px 400px;
+	margin: 70px auto 30px auto;
+	width: 105px;
 	text-align: center;
+	padding: 11px 5px 11px 5px;
 }
 #table {
 	background-color: #fdfdfd;
