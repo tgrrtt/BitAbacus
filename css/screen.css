@@ -1,16 +1,34 @@
 .avoid-header{
 	margin-top:75px;
 }
+.navbar {
+}
 
-.footer{
+@media (min-width: 768px) { 
+  .sb-fixed{
+    position: fixed;
+    width: 18%;
+  } 
+}
+
+/*.footer{
 	height:40px;
 	margin-top:-40px;
+} */
+
+.footer{
+	text-align: center;
 }
 #setting-nav-list {
 	margin-top: 91px;
 }
 #info-nav-list {
 	margin-top: 91px;
+}
+
+#info-update{
+	margin: 5px auto;
+	text-align: center;
 }
 
 #splash {

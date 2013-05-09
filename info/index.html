@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/screen.css">
 </head>
 <body>
-	<div class="navbar navbar-fixed-top ">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<ul class="nav">
@@ -38,7 +38,7 @@
 	<div class="container-fluid avoid-header">
 		<div class="row-fluid">
 			<div class="span3" id="info-nav-list">
-				<div class="well sidebar-nav">
+				<div class="well sidebar-nav sb-fixed">
 					<ul class="nav nav-list">
 						<li class="nav-header">Info</li>
 						<li class="active"><a href="#">Portfolio</a></li>
@@ -52,15 +52,21 @@
 					<p>Portfolio, help, and contact information.</p>
 					<h4>What is BitAbacus?</h4>
 					<p>BitAbacus is a webservice that keeps track of your cryptocurrency holdings. As more and more cryptocurrencies are introduced, and as the price fluctuates wildly, it can be hard to tell exactly what your cryptocurrency net-worth is at any given moment. BitAbacus aims to take all the work out of this by automatically retrieving your cryptocurrency info from exchanges and wallets and showing you the conversions to bitcoin and fiat.</p>
-					<h4>How?</h4>
+					<h4>How does it work?</h4>
 					<p>BitAbacus uses info APIs to get information on your holdings on various exchanges. This means your info will be kept current.</p>
-					<h4>Is this secure?</h4>
-					<p>In order for the APIs to be secure, one must use info APIs. Supported exchanges allow the user to set the permissions of the API. As long as the APIs in use on BitAbacus are set to "info only" on their respective exchanges, no harm can be done.</p>
+					<h4>How secure is it?</h4>
+					<p>Everything is secure as long as trade or withdrawal APIs are not used. Supported exchanges allow the user to set the permissions of the API. As long as the APIs in use on BitAbacus are set to "info only" on their respective exchanges, no harm can be done.</p>
+					<h4>How do I set up the APIs?</h4>
+					<p>Log into the exchange you with to pull data from. Go to the API section, and create a new API for use on this site. Either before creaating it or afterwards, you will have the option to select the permissions of the API. Only select "info". Copy and paste your API key and secret onto their respective fields under the portfolio settings page of this site.</p>
 					<h4>Contact</h4>
 					<p>admin@bitabacus.com</p>
 				</div>
 			</div><!--/row-->
 		</div>
 	</div>
+	<hr>
+	<footer>
+		<p class="footer">BitAbacus 2013 admin@bitabacus.com</p>
+	</footer>
 </body>
 </html>
