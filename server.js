@@ -1,6 +1,7 @@
 // Include http module.
 var http = require("http");
 var https = require("https");
+var hmac = require("authhmac");
  
 var ticker;
 
@@ -27,12 +28,30 @@ function getTicker() {
 
 	request.end();
 }
-  
+
+function getBalance(){
+	var key = 'my hmac key';
+	var secret = 'my hmac secret'; 
+
+http_options = {
+  host: 'test.com',
+  port: 80,
+  path: '/api',
+  method: 'POST',
+  headers: {
+    'Content-Type': 'multipart/form-data'
+  }
+};
+
+authhmac.sign(http_options, key, secret);
+}
+
 setInterval(getTicker, 5000);
 
 // Create the server. Function passed as parameter is called on every request made.
 // request variable holds all request parameters
 // response variable allows you to do anything with response sent to the client.
+
 http.createServer(function (request, response) {
 	// Attach listener on end event.
 	// This event is called when client sent all data and is waiting for response.
