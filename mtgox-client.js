@@ -1,8 +1,6 @@
 var https = require("https");
 
-mtgox = {};
-
-mtgox.getTicker = function (callback) { 
+exports.getTicker = function (callback) { 
 
 	var options = {
 		host: 'data.mtgox.com',
