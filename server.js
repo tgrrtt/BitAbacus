@@ -1,37 +1,13 @@
 // Include http module.
 var credentials = require("./myKeys.json")
 var http = require("http");
-var https = require("https");
 var url = require('url');
 var hmac = require("authhmac");
 var crypto = require("crypto")
- 
-var ticker;
+var mtgox = require('./mtgox-client');
 var nonce = 13;
 
-function getTicker() { 
 
-	var options = {
-		host: 'data.mtgox.com',
-		path: "/api/1/BTCUSD/ticker"
-	};
-
-	var request = https.request(options, function(response) {  
-		  
-			var body = "";
-		  
-		  response.on("data", function(data) {  
-				body += data;  
-		  });  
-			 
-		  response.on("end", function() {  
-				ticker = JSON.parse(body);  
-				console.log(ticker);
-			});
-	});
-
-	request.end();
-}
 
 function getBalance() {
 	var key = credentials.key;
@@ -81,7 +57,7 @@ function getBalance() {
 	request.end();
 }
 
-getBalance();
+//getBalance();
 
 //setInterval(getTicker, 5000);
 
@@ -89,20 +65,41 @@ getBalance();
 // request variable holds all request parameters
 // response variable allows you to do anything with response sent to the client.
 
-http.createServer(function (request, response) {
-	// Attach listener on end event.
-	// This event is called when client sent all data and is waiting for response.
-	request.on("end", function () {
-		// Write headers to the response.
-		// 200 is HTTP status code (this one means success)
-		// Second parameter holds header fields in object
-		// We are sending plain text, so Content-Type should be text/plain
-		response.writeHead(200, {
-			'Content-Type': 'text/plain'
-		});
-		// Send data and end response.
-		var str = ticker.return.last.display;
-		response.end(str);
-	});
-// Listen on the 8080 port.
-}).listen(8080);
+var express = require('express');
+var app = express();
+
+// GET /
+app.get('/', function(req, res){
+  res.send('hello world');
+});
+
+// GET /ticker
+// gets ticker data from Mt. Gox
+app.get('/ticker', function(req, res) {
+	mtgox.getTicker(function(ticker){
+		res.send(ticker);
+	})
+});
+
+app.listen(5000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
