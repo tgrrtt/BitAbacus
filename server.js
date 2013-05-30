@@ -1,9 +1,13 @@
 // Include http module.
+var credentials = require("./myKeys.json")
 var http = require("http");
 var https = require("https");
+var url = require('url');
 var hmac = require("authhmac");
+var crypto = require("crypto")
  
 var ticker;
+var nonce = 13;
 
 function getTicker() { 
 
@@ -29,24 +33,57 @@ function getTicker() {
 	request.end();
 }
 
-function getBalance(){
-	var key = 'my hmac key';
-	var secret = 'my hmac secret'; 
+function getBalance() {
+	var key = credentials.key;
+	var secret = credentials.secret;
 
-http_options = {
-  host: 'test.com',
-  port: 80,
-  path: '/api',
-  method: 'POST',
-  headers: {
-    'Content-Type': 'multipart/form-data'
-  }
-};
+	// this needs to be incremented on each request
+	//nonce += 1;
 
-authhmac.sign(http_options, key, secret);
+	var params = {
+		"method": "getInfo",
+        "nonce": nonce
+    }
+
+    // TODO: create query string from params
+    // ex. method=getInfo&nounce=13
+    var sign = {}; // = someFunctionThatTurnsHashIntoQuertyString(params);
+
+    // use "crypto" library instead
+    // this may not work as it may expect a hash and not a string
+	hmac.sign(sign, key, secret);
+
+	var options = {
+		host: 'btc-e.com',
+		path: '/tapi',
+		method: 'POST',
+		headers: {
+			'Content-Type': 'multipart/form-data',
+			'Key': key,
+			'Sign': sign
+		}
+	};
+
+	var request = https.request(options, function(response) {  
+	  
+		var body = "";
+	  
+		response.on("data", function(data) {  
+			body += data;  
+		});  
+		 
+		response.on("end", function() {  
+			var data = JSON.parse(body);  
+			console.log(data);
+		});
+	});
+
+	request.end();
 }
 
-setInterval(getTicker, 5000);
+getBalance();
+
+//setInterval(getTicker, 5000);
 
 // Create the server. Function passed as parameter is called on every request made.
 // request variable holds all request parameters
@@ -64,7 +101,7 @@ http.createServer(function (request, response) {
 			'Content-Type': 'text/plain'
 		});
 		// Send data and end response.
-		var str = ticker.return.last.display
+		var str = ticker.return.last.display;
 		response.end(str);
 	});
 // Listen on the 8080 port.
