@@ -3,7 +3,8 @@
 <head> 
 	<title>BitAbacus</title>
 	<script src="../js/jquery.js"></script>
-	<script src="../js/bootstrap.js"></script> 
+	<script src="../js/bootstrap.js"></script>
+    <script src="../js/mtgox-ticker-update.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/spacelab-bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/screen.css">
 </head>
@@ -35,8 +36,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="alert alert-info" id="goxTick">
-		<span>Mt. Gox <strong>$112</strong></span>
+	<div class="alert alert-info" id="gox-ticker-container">
+		<span>Mt. Gox <span id="gox-ticker-price"></span></span>
 	</div>
 
 	<div class="container well well-small" id="table">

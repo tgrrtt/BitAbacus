@@ -17,24 +17,7 @@ app.get('/api/ticker', function(req, res) {
 		res.send(ticker);
 	})
 });
-
 app.listen(5000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
