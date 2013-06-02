@@ -1,6 +1,10 @@
-//TODO: Write stuff to implement ajax & jquery
-//get jquery to replace sprice with 190 and then worry about ajax after that
-$(document).ready(function() {
+//TODO: Implement ajax
+
+$(document).ready(function () {
     var price = "$190";
-    $("#gox-ticker-price").text(price);
-})
+    var priceUpdate = "$130";
+    $("#gox-ticker-price").text(price)
+    setInterval(function () {
+        $("#gox-ticker-price").text(priceUpdate);
+    }, 300000);
+});
