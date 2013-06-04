@@ -1,14 +1,17 @@
+//TODO:write code to snatch public btc-e info
+
+
 $(document).ready(function () {
 
     var minutesPerUpdate = function (minutes){
         return minutes * 1000 * 60;
     };
-
+//Fill in element and add json path at the end of .done
     var tickerAjax = function (){
-        $.ajax("/api/mtgox_btc_usd_data", {
+        $.ajax("/api/btce_ltc_btc_data", {
             type: "GET"
         }).done(function(response) {
-                $("#gox-ticker-price").text(response.return.avg.value);
+                $().text(response.);
             });
     };
 
@@ -16,3 +19,5 @@ $(document).ready(function () {
 
     var tickerTimeout = window.setInterval(tickerAjax, minutesPerUpdate(1));
 });
+
+
