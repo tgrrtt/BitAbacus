@@ -20,18 +20,11 @@ app.get('/api', function(req, res) {
 
 app.get('/api/random', function(req, res) {
     var rand = Math.floor(Math.random() * 1000);
-    var blah = {
+    var randPrice = {
         price: rand
     }
-    res.send(blah);
+    res.send(randPrice);
 })
-
-//app.get('/api/ticker/goxTickerData.txt', function(req, res) {
-//    mtgox.saveTicker(function(ticker){
-//        res.send(ticker);
-//    })
-//});
-
 
 app.listen(5000);
 
