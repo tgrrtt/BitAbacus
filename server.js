@@ -1,7 +1,7 @@
 
 //var btce = require('./btce-client.js');
 var mtgox = require('./mtgox-public-client.js');
-//var btce = require('./btce-public-client.js')
+var btce = require('./btce-public-client.js')
 var express = require('express');
 var app = express();
 
@@ -27,7 +27,7 @@ app.get('/api/mtgox_btc_usd_data', function(req, res) {
 });
 
 app.get('/api/btce_ltc_btc_data', function(req, res) {
-    btce.getTicker(function(ticker){
+    btce.getTicker2(function(ticker){
         res.send(ticker);
     })
 });

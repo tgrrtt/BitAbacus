@@ -8,11 +8,11 @@ $(document).ready(function () {
         $.ajax("/api/mtgox_btc_usd_data", {
             type: "GET"
         }).done(function(response) {
-                $("#gox-ticker-price").text(response.return.avg.value);
+                $("#gox-ticker-price").text(response.return.last.display_short);
             });
     };
 
     tickerAjax();
 
-    var tickerTimeout = window.setInterval(tickerAjax, minutesPerUpdate(1));
+    var tickerTimeout = window.setInterval(tickerAjax, minutesPerUpdate(5));
 });

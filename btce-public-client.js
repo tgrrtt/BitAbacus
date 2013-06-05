@@ -1,11 +1,11 @@
 var https = require("https");
 var fs = require('fs');
 
-exports.getTicker = function (callback) {
+exports.getTicker2 = function (callback) {
 
     var options = {
-        host: 'data.mtgox.com',
-        path: "/api/1/BTCUSD/ticker"
+        host: "btc-e.com",
+        path: "/api/2/ltc_btc/ticker"
     };
 
     var request = https.request(options, function(response) {

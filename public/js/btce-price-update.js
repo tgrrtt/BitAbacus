@@ -11,7 +11,7 @@ $(document).ready(function () {
         $.ajax("/api/btce_ltc_btc_data", {
             type: "GET"
         }).done(function(response) {
-                $().text(response.);
+                $().text(response.ticker.last);
             });
     };
 
