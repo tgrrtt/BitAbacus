@@ -9,18 +9,18 @@ exports.getTicker = function (callback) {
 	};
 
 	var request = https.request(options, function(response) {  
+
+		var body = "";
 		  
-			var body = "";
-		  
-		  response.on("data", function(data) {  
-				body += data;  
-		  });  
+		response.on("data", function(data) {
+		    body += data;
+		});
 			 
-		  response.on("end", function() {  
-				var ticker = JSON.parse(body);  
-				console.log(ticker);
-				callback(ticker);
-			});
+		response.on("end", function() {
+		    var ticker = JSON.parse(body);
+		    console.log(ticker);
+		    callback(ticker);
+		});
 	});
 
 	request.end();

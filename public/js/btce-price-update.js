@@ -1,5 +1,4 @@
-//TODO:write code to snatch public btc-e info
-
+//Code for updating portfolio amount into btcs worth
 
 $(document).ready(function () {
 
@@ -11,7 +10,7 @@ $(document).ready(function () {
         $.ajax("/api/btce_ltc_btc_data", {
             type: "GET"
         }).done(function(response) {
-                $().text(response.ticker.last);
+                $(element_goes_here).text(response.insert_json_here);
             });
     };
 
