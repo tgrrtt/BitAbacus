@@ -5,32 +5,22 @@ $(document).ready(function(){
         return minutes * 1000 * 60;
     };
 
-    var portfUpdateAjax = function (){
+//use array and loop to iterate through and update all spans in ajax call?
+
+    var portfolioUpdateAjax = function (elm){
         $.ajax("/mock/mock-user-data.json", {
             type: "GET"
-        }).done(function(response) {
-                $("#user-address2-amount").text(response.portfolio.address_book.address2.amount);
-            });
+            // Now this wont work with nested objects...
+        }).done(function(response){
+            var test = response.portfolio.address_book.adr2.amount;
+            elm.text(test);
+            window.setInterval(function(){
+                test++
+                elm.text(test);
+            }, minutesPerUpdate(.1));
+        });
     };
 
-    portfUpdateAjax();
-
-//    var amount = portfolio.address2.amount;
-    var amount1 = 200;
-    var amount2 = 225;
-
-
-//    var updateUserAmount = function(elm, arg){
-//        elm.text(arg);
-//        console.log(elm);
-//        var argPlus = arg;
-//        window.setInterval(function(){
-//            argPlus++;
-//            console.log(elm);
-//            elm.text(argPlus);
-//        }, minutesPerUpdate(0.1));
-//    };
-//
-//    updateUserAmount($("#user-address2-amount"), amount1);
+    portfolioUpdateAjax($("#user-address2-amount"));
 
 });

@@ -3,3 +3,5 @@ css/screenold.css
 .DS_Store
 node_modules
 myKeys.json
+
+public/mock/mock-user-data.json
