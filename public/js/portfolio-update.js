@@ -1,3 +1,6 @@
+//Updates the btc price ticker on portfolio/index.html "Currency" column.
+//Specifically litecoin at this time.
+
 $(document).ready(function(){
 
 

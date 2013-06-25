@@ -1,4 +1,4 @@
-//Code for updating portfolio amount into btcs worth
+//Code for updating portfolio amount "Currency" into Bitcoins worth
 
 $(document).ready(function () {
 

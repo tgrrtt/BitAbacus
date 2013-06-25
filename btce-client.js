@@ -1,3 +1,6 @@
+//Node code for getting users infromation from btce using their API and key
+
+
 var https = require("https");
 var hmac = require("authhmac");
 var crypto = require("crypto");

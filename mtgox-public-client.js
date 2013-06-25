@@ -1,3 +1,5 @@
+//Get exchange rate data via public API from Mt Gox and returns it to server.app to serve.
+
 var https = require("https");
 var fs = require('fs');
 

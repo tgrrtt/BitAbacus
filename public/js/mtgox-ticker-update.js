@@ -1,3 +1,5 @@
+//Updates ticker on portfolio/index.html with mtgox exchange data.
+
 $(document).ready(function () {
 
     var minutesPerUpdate = function (minutes){

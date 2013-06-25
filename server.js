@@ -1,3 +1,6 @@
+//Serves JSON files with exchange rate date on calls to /api/
+
+
 
 //var btce = require('./btce-client.js');
 var mtgox = require('./mtgox-public-client.js');
